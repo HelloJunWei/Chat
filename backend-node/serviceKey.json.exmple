@@ -1,0 +1,12 @@
+{
+  "type": {{ your firbase config }},
+  "project_id": {{ your firbase config }},
+  "private_key_id": {{ your firbase config }},
+  "private_key": {{ your firbase config }},
+  "client_email": {{ your firbase config }},
+  "client_id": {{ your firbase config }},
+  "auth_uri": {{ your firbase config }},
+  "token_uri": {{ your firbase config }},
+  "auth_provider_x509_cert_url": {{ your firbase config }},
+  "client_x509_cert_url": {{ your firbase config }}
+}

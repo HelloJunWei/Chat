@@ -41,6 +41,8 @@ build/Release
 node_modules/
 
 */node_modules/
+*/.env.*
+*/serviceKey.json
 jspm_packages/
 
 # TypeScript v1 declaration files
