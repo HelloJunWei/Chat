@@ -1,0 +1,38 @@
+/* The loading Class */
+.skeleton_loading {
+  position: relative;
+  background-color: #fdfdfd30 !important;
+  overflow: hidden;
+  color: transparent !important;
+  z-index: 0;
+  > * {
+    opacity: 0;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+
+    /* Adding animation */
+    animation: skeleton_loading 1.2s infinite cubic-bezier(0.39, 0.58, 0.57, 1);
+  }
+}
+
+/* Loading Animation */
+@keyframes skeleton_loading {
+  100% {
+    transform: translateX(100%);
+  }
+}

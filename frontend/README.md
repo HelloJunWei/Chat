@@ -1,16 +1,50 @@
-# Vue 3 + TypeScript + Vite
+# chat-app
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Project setup
+```
+yarn install
+```
+### Prepare config file
 
-## Recommended IDE Setup
+```.env.development``` and ```.env.production```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+```
+VUE_APP_FIREBASE_API_KEY={your firebase config}
+VUE_APP_FIREBASE_AUTH_DOMAIN={your firebase config}
+VUE_APP_FIREBASE_PROJECT_ID={your firebase config}
+VUE_APP_FIREBASE_STORAGE_BUCKET={your firebase config}
+VUE_APP_FIREBASE_MESSAGING_SENDER_ID={your firebase config}
+VUE_APP_FIREBASE_APP_ID={your firebase config}
+VUE_APP_API_URL={your api url}
+```
+Here is your firebase config.
+If you don't know how to config it, Please check document [Add Firebase to your JavaScript project](https://firebase.google.com/docs/web/setup)
 
-## Type Support For `.vue` Imports in TS
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+### Compiles and minifies for production
+```
+yarn build
+```
+
+
+## How to use
+
+when user login, chat app will auto pop up.
+
+
+![截圖 2022-09-01 上午9 47 03](https://user-images.githubusercontent.com/18310281/187814801-bcfd73bb-d27a-4c2f-85de-06d57c8d07f0.png)
+
+
+
+and here is the chatroom lists page. After cilck the room, will redirect to chat room page
+
+![截圖 2022-09-01 上午9 49 07](https://user-images.githubusercontent.com/18310281/187815020-2c85c609-1f3d-4862-81d6-4e47dbcdf7d8.png)
+
+
+Finally, we can talk with the other user.
