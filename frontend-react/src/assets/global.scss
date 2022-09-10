@@ -1,0 +1,273 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$mainGreen: #19d2b2;
+$messageErrorGreen: #458D80;
+$skeletonMainColor: #6a6a6a;
+
+// ====================
+// css variable
+// ====================
+
+:root {
+  --primary-color: #191b22;
+  --secondary-color: #34546e;
+  --bg-light-color: #e8e7e7;
+  --bg-dark-color: #272b36;
+  --main-green-color: #{$mainGreen};
+  --main-error-green-color: #{$messageErrorGreen};
+  --main-green-color--darker: #{scale-color($color: $mainGreen, $lightness: -40%)};
+  --main-content-text: #fff;
+  --main-border-color: #434343;
+  --a-link-color: #0879FC;
+  --a-visited-color: #A44FE3;
+  --talk-delete-red: #e4595a;
+
+  --black: #000000;
+  --rouge: #af1224;
+  --white: #ffffff;
+  --neutral-black: #121212;
+  --dusty-orange: #fa8237;
+  --vermillion: #e7211a;
+  --topaz: #{$mainGreen};
+  --dark-grey-blue: #34546e;
+  --deep-sky-blue: #1d8bf1;
+  --light-mode-bg: #d5d5d5;
+  --white: #f7f7f7;
+  --tealish: #1fb49a;
+  --slate-grey: #5b6276;
+  --jpoint-blue: #1d8bf1;
+  --official-purple: #7b61ff;
+  --official-btn-disabled: #707070;
+  --modal-success: #1d8bf1;
+  --modal-danger: #fd6060;
+  --modal-warning: #f8b535;
+  --modal-default: #51545d;
+  --skeleton-main-color: #{$skeletonMainColor};
+  --skeleton-main-color-alpah: #{scale-color($color: $skeletonMainColor, $alpha: -50%)};
+
+  --header-operation-color-red: #aa0d31;
+  --header-operation-color-disabled: #51545D;
+}
+
+
+
+
+// ====================
+// custonm global css
+// ====================
+@include wrap_main_id {
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+  font-family: 'Noto Sans', sans-serif;
+  padding-bottom: env(safe-area-inset-bottom);
+  font-style: normal;
+  font-stretch: normal;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+// ====================
+// Material Icons
+// ====================
+
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v138/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v108/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUcel5euIg.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@include wrap_main_id {
+  .message-link {
+    &:link {
+      color: var(--a-link-color);
+    }
+
+    &:visited {
+      color: var(--a-visited-color);
+    }
+  }
+  .scrollbar-w-2::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .scrollbar-track-blue-lighter::-webkit-scrollbar-track {
+    --bg-opacity: 0.5;
+    background-color: #343434;
+  }
+
+  .scrollbar-track-grey-lighter::-webkit-scrollbar-track {
+    --bg-opacity: 0.5;
+    background-color: #eeee;
+  }
+
+  .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
+    --bg-opacity: 0.3;
+    background-color: rgba(237, 242, 247, var(--bg-opacity));
+  }
+
+  .scrollbar-thumb-grey::-webkit-scrollbar-thumb {
+    background-color: #adacac;
+  }
+
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+  }
+
+  /*** iPhone and iOS Form Input Zoom Fixes ***/
+  /* Fix Input Zoom on devices older than iPhone 5: */
+  @media screen and (device-aspect-ratio: 2/3) {
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"] {
+      font-size: 16px;
+    }
+  }
+
+  /* Fix Input Zoom on iPhone 5, 5C, 5S, iPod Touch 5g */
+  @media screen and (device-aspect-ratio: 40/71) {
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"] {
+      font-size: 16px;
+    }
+  }
+
+  /* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
+  @media screen and (device-aspect-ratio: 375/667) {
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"] {
+      font-size: 16px;
+    }
+  }
+
+  /* Fix Input Zoom on iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8, iPhone X, XS, XS Max  */
+  @media screen and (device-aspect-ratio: 9/16) {
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"] {
+      font-size: 16px;
+    }
+  }
+
+  /*
+  * disable auto-zoom on iphone input field focus 
+  * http://www.456bereastreet.com/archive/201212/ios_webkit_browsers_and_auto-zooming_form_controls/
+  */
+  input[type='text']:focus,
+  input[type='number']:focus,
+  textarea:focus {
+    font-size: 16px;
+  }
+
+  .font-icon-ani {
+    max-width: 30px;
+    visibility: hidden;
+    animation-name: fontAni;
+    animation-fill-mode: forwards;
+    animation-delay: 250ms;
+    animation-duration: 100ms;
+  }
+  @keyframes fontAni {
+    100% {
+    visibility: visible;
+    }
+  }
+}
+
+

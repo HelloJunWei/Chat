@@ -1,0 +1,68 @@
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,tsx,jsx}",
+    "./src/*.{tsx, html}",
+    "./src/views/*.{tsx, html}",
+  ],
+  theme: {
+    zIndex: {
+      '0': 0,
+      '10': 10,
+      '20': 20,
+      '30': 30,
+      '40': 40,
+      '50': 50,
+      '25': 25,
+      '75': 75,
+      '100': 100,
+      '1000': 1000,
+    },
+    extend: {},
+    colors: {
+      transparent: 'transparent',
+      blue: colors.blue,
+      gray: colors.gray,
+      grey: {
+        100: '#B9BBBE',
+        200: '#71777D',
+        300: '#4F545C',
+        400: '#2F3136',
+        500: '#292B2F',
+        600: '#212224',
+        700: '#292B2F'
+      },
+      indigo: colors.indigo,
+      white: colors.white,
+      purple: colors.purple,
+      red: colors.red,
+      black: colors.black,
+      primary: "var(--primary-color)",
+      secondary: "var(--secondary-color)",
+      tertiary: "var(--dark-grey-blue)",
+      bgLight: "var(--bg-light-color)",
+      bgLight2: "var(--slate-grey)",
+      bgDark: "var(--bg-dark-color)",
+      mainGreen: "var(--main-green-color)",
+      mainErrorGreenColor: "var(--main-error-green-color)",
+      mainGreenDarker: "var(--main-green-color--darker)",
+      contentText: "var(--main-content-text)",
+      mainBodColor: "var(--main-border-color)",
+      skeletonMainColor: "var(--skeleton-main-color)",
+      skeletonMainColorAlpha: "var(--skeleton-main-color-alpha)",
+      jpointBlue: "var(--jpoint-blue)",
+      officialPurple: "var(--official-purple)",
+      officialBtnDisabled: "var(--official-btn-disabled)",
+      modalBlue: "var(--modal-success)",
+      modalYellow: "var(--modal-warning)",
+      modalRed: "var(--modal-danger)",
+      modalDefault: "var(--modal-default)",
+      neutralBlack: "var(--neutral-black)",
+      btnDisabled: "var(--header-operation-color-disabled)",
+      headerOperationRed: "var(--header-operation-color-red)",
+      talkDeleteRed: "var(--talk-delete-red)"
+    }
+  },
+  plugins: [],
+}

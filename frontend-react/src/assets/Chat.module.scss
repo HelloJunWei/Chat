@@ -1,0 +1,37 @@
+@include wrap_main_id {
+  .mainWrap {
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+    height: var(--vh);
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    .mainWrap {
+      min-height: 100%;
+    }
+  }
+
+  @screen md {
+    .mainWrap {
+      min-height: 20em;
+      height: auto;
+    }
+  }
+  .dashboardEle {
+    min-height: 100%;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .dashboardEle {
+      min-height: 100%;
+    }
+  }
+
+  @screen md {
+    .dashboardEle {
+      min-height: 20rem;
+      height: 90vh;
+      max-height: 39rem;
+    }
+  }
+}

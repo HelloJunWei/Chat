@@ -1,0 +1,9 @@
+// ====================
+// scss methos
+// ====================
+@use "sass:color";
+@mixin wrap_main_id {
+  #chatWrap {
+    @content;
+  }
+}
