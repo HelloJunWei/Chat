@@ -10,9 +10,7 @@ import routes from './routes'
 const app = express()
 const port = process.env.PORT || 4000
 
-app.use(cors({
-  origin: ['https://chat-room-3131.herokuapp.com']
-}))
+app.use(cors())
 
 app.use(rateLimit({
   windowMs: 5 * 60 * 1000,
