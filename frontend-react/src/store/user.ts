@@ -41,13 +41,11 @@ const userSlice = createSlice({
   },
   extraReducers(builder) {
     builder.addCase(login.fulfilled, (state, { payload }) => {
-      console.log(payload)
       state.firebaseToken = payload.firebaseToken
       state.displayName = payload.displayName
       state.photoUrl = payload.photoUrl
     }),
     builder.addCase(login.rejected, (state, { payload }) => {
-      console.log('error')
     })
   },
 })
