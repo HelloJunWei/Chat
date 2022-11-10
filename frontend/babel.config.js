@@ -3,6 +3,6 @@ module.exports = {
     '@vue/cli-plugin-babel/preset',
   ],
   "plugins": [
-    ["@babel/plugin-transform-modules-commonjs"]
+    ...( process.env.NODE_ENV ==='development' ? ["@babel/plugin-transform-modules-commonjs"]: [])
   ]
 }
